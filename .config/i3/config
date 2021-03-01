@@ -7,8 +7,8 @@ bindsym Mod1+t exec exec termite -d ~ -t "file browser" -e ranger
 bindsym Mod1+p exec exec termite -t "system monitor" -e gtop
 bindsym Mod1+o exec exec termite -t "task manager" -e htop
 
-gaps inner 10
-gaps outer 4
+#gaps inner 10
+#gaps outer 4
 
 set $up l
 set $down k
@@ -140,8 +140,12 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
+bindsym Mod1+Shift+s layout stacking
+bindsym Mod1+Shift+o layout toggle split
+bindsym Mod1+Shift+t layout tabbed
+
 exec --no-startup-id exec /code/xclipsync/xclipsync
-exec_always --no-startup-id exec feh --bg-scale /mnt/chromeos/GoogleDrive/MyDrive/linux/background.png
+exec_always --no-startup-id exec feh --bg-scale ~/.config/i3/background.png
 exec_always --no-startup-id exec compton
 exec_always --no-startup-id exec xrdb -load ~/.Xresources
 exec_always --no-startup-id exec ~/.scripts/polylaunch
