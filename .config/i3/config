@@ -144,6 +144,18 @@ bindsym Mod1+Shift+s layout stacking
 bindsym Mod1+Shift+o layout toggle split
 bindsym Mod1+Shift+t layout tabbed
 
+# rofi
+bindsym Mod1+Ctrl+semicolon exec ~/bin/rofi-surfraw-browser
+bindsym Mod1+Ctrl+w exec "rofi -show-incons -show window"
+
+# scrot
+bindsym Ctrl+Shift+u "scrot -e 'mv $f /home/sjsrey/Pictures/ScreenShots/%Y-%m--%d-%H%M-%s-desk.png'" 
+
+
+# greenclip
+exec --no-startup-id ~/bin/greenclip daemon
+bindsym Control+Mod1+i exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 exec --no-startup-id exec /code/xclipsync/xclipsync
 exec_always --no-startup-id exec feh --bg-scale ~/.config/i3/background.png
 exec_always --no-startup-id exec compton
