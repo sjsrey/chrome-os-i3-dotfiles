@@ -140,9 +140,9 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
-bindsym Mod1+Shift+s layout stacking
-bindsym Mod1+Shift+o layout toggle split
-bindsym Mod1+Shift+t layout tabbed
+#bindsym Mod1+Shift+s layout stacking
+#bindsym Mod1+Shift+o layout toggle split
+#bindsym Mod1+Shift+t layout tabbed
 
 # rofi
 bindsym Mod1+Ctrl+semicolon exec ~/bin/rofi-surfraw-browser
